@@ -49,10 +49,8 @@ class Program
         garage.AddCar(car1);
         garage.AddCar(car2);
 
-        // Создаем мойку
         Washer washer = new Washer();
 
-        // Моем все автомобили в гараже
         garage.WashAllCars(washer);
     }
 }
