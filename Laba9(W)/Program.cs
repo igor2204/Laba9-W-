@@ -1,5 +1,4 @@
-﻿
-using static Car;
+﻿using static Car;
 
 class Car
 {
@@ -11,7 +10,7 @@ class Car
         Model = model;
         IsClean = isClean;
     }
-    public delegate void WashCarDelegate(Car car);
+    public delegate void WashCarDelegate(Car car); 
 }
 
 class Garage
@@ -27,7 +26,7 @@ class Garage
     {
         foreach (Car car in cars)
         {
-            washMethod(car); // Вызов метода через делегат
+            washMethod(car); 
         }
     }
 }
@@ -45,8 +44,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Car car1 = new Car("Mazda RX-7");
-        Car car2 = new Car("Chevrolet Camaro", false); 
+        Car car1 = new Car("Tesla Model S");
+        Car car2 = new Car("Ford Mustang", false);
 
         Garage garage = new Garage();
         garage.AddCar(car1);
@@ -54,9 +53,9 @@ class Program
 
         Washer washer = new Washer();
 
-        // Создание делегата, ссылающегося на метод Wash
+
         WashCarDelegate washMethod = washer.Wash;
 
-        garage.WashAllCars(washMethod); // Передача делегата в метод
+        garage.WashAllCars(washMethod); 
     }
 }
