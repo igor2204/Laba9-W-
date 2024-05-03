@@ -44,8 +44,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Car car1 = new Car("Tesla Model S");
-        Car car2 = new Car("Ford Mustang", false);
+        Car car1 = new Car("Mazda RX-7");
+        Car car2 = new Car("Chevrolet Camaro", false);
 
         Garage garage = new Garage();
         garage.AddCar(car1);
